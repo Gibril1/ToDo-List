@@ -1,0 +1,11 @@
+{% extends 'index.html' %}
+
+{% block content %}  
+    {% for todo in todos %}
+        <ul>
+            <a href="{ url 'todo-update'}">Edit</a>
+            <a href="{ url 'todo-Delete'}">Delete</a>
+            <li>{{ todo.content }}</li>
+        </ul>
+    {% endfor %}
+{% endblock content %}
